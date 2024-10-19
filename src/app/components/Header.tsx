@@ -6,6 +6,7 @@ import { UserProfile } from './UserProfile';
 import { NavLinks } from './NavLinks';
 import { SearchForm } from "./SearchForm";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 
 
@@ -23,7 +24,6 @@ export default function Header() {
     const onSearch = ( event: React.FormEvent<HTMLFormElement> ) => {
         event.preventDefault();
         const newParams = new URLSearchParams( params.toString() );
-        console.log(newParams)
         newParams.set( 'title', searchTerm );
         router.push(`/search?${newParams.toString()}`)
     }
@@ -38,7 +38,9 @@ export default function Header() {
             transition-all lg:px-16 lg:py-4`}
         >
             <div className="flex items-center space-x-2 md:space-x-8">
-                <Logo />
+                <Link href={'/'}>
+                    <Logo />
+                </Link>
 
                 <NavLinks />
             </div>
