@@ -1,5 +1,10 @@
 
-
+type User = {
+    id: string,
+    name: string,
+    username: string,
+    website: string,
+}
 
 export const getAppSettings = (): Promise<{ theme: string; language: string}> => {
     return new Promise ((resolve) => {
@@ -29,4 +34,10 @@ export const getUserInfo = (): Promise<{
         }, 3000)
     });
 
+}
+
+export async function getUserById(id: string): Promise<User> {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const user = await response.json()
+    return user
 }
