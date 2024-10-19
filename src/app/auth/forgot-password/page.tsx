@@ -1,6 +1,5 @@
+import ForgotPasswordForm from "./ForgotPasswordForm";
 
 export default function ForgotPassword() {
-  return (
-    <div>Forgot Password Route</div>
-  )
+  return <ForgotPasswordForm />
 }

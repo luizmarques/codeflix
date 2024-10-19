@@ -7,4 +7,4 @@ export default function LoginForm() {
     e.preventDefault();
   }
   return <AuthForm formType="login" onSubmit={handleSubmit} />
-}
+}                                                                                                   
