@@ -1,5 +1,4 @@
 "use client"
-import { AuthForm } from "../../components/AuthForm";
 import { InputField } from "../../components/InputField";
 
 export default function ForgotPasswordForm() {

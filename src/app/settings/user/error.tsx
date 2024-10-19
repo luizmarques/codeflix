@@ -1,7 +1,8 @@
 'use client';
 import React, { useEffect } from 'react';
 
-export default function Error({ error, reset }: any) {
+// eslint-disable-next-line
+export default function Error({ error }: any) {
   useEffect(() => {
     console.log('logging error:', error);
   }, [error]);
