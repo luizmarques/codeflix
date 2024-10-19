@@ -1,37 +1,33 @@
-import { Movie, Movies } from '../app/types/movies';
+import { Movie, Movies } from '../app/types/movie';
 import { RequestOptions, apiRequest } from './ApiRequest';
 
 export const getMovieById = async (id: string): Promise<Movie> => {
   return apiRequest(`movies/${encodeURIComponent(id)}`);
 };
 
-export const getFeatureMovie = async (id: string): Promise<Movie> => {
-  return apiRequest(`feature/${encodeURIComponent(id)}`);
+export const getFeaturedMovie = async (id: string): Promise<Movie> => {
+  return apiRequest(`featured/${id}`);
 };
 
 export const getMoviesByGenre = async (
   genre: string,
   options?: RequestOptions
 ): Promise<Movies> => {
-  return apiRequest(
-    `movies`,
-    {
-      genre_like: encodeURIComponent(genre),
-    },
-    options
-  );
+  return apiRequest(`movies`, { genres_like: genre }, options);
 };
 
 export const searchMovies = async (
   title: string = '',
   genre: string = '',
-  options?: RequestOptions
+  options: RequestOptions = {
+    _limit: 100,
+  }
 ): Promise<Movies> => {
   return apiRequest(
     `movies`,
     {
-      title_like: encodeURIComponent(title),
-      genre_like: encodeURIComponent(genre),
+      title_like: title,
+      genres_like: genre,
     },
     options
   );

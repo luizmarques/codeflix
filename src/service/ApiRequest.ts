@@ -18,27 +18,23 @@ export const defaultOptions: RequestOptions = {
 export function buildQueryString(params: ApiQueryParams) {
   const query = Object.entries(params)
     .filter(([, value]) => value !== undefined)
-    .map(([key, value]) => [key, encodeURIComponent(String(value))]);
+    .map(([key, value]) => [key, String(value)]);
 
   return `?${new URLSearchParams(Object.fromEntries(query)).toString()}`;
 }
 
-export async function apiRequest(
+export async function apiRequest<T>(
   endpoint: string,
   query: ApiQueryParams = {},
   options: RequestOptions = {}
-) {
-  const mergeOptions: RequestOptions = {
-    ...defaultOptions,
-    ...options,
-  };
-  const queryString: string = buildQueryString({ ...query, ...mergeOptions });
+): Promise<T> {
+  const mergedOptions: RequestOptions = { ...defaultOptions, ...options };
+  const queryString: string = buildQueryString({ ...query, ...mergedOptions });
   try {
     const response = await fetch(`${API_URL}/${endpoint}${queryString}`);
     if (!response.ok) {
       throw new Error(`API request failed: ${response.statusText}`);
     }
-
     return response.json();
   } catch (error) {
     throw error;
