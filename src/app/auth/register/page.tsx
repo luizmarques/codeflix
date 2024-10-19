@@ -1,7 +1,5 @@
-
+import RegisterForm from "./RegisterForm";
 
 export default function Register() {
-  return (
-    <div>Register Route</div>
-  )
+  return <RegisterForm />
 }
