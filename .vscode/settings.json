@@ -1,40 +1,59 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
-    // Controls if quick suggestions should show up while typing
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.options": {
+    "rules": {
+      "import/default": "error",
+      "import/export": "error",
+      "import/named": "error",
+      "import/namespace": "error",
+      "import/no-duplicates": "error",
+      "import/no-named-as-default": "error",
+      "import/no-named-as-default-member": "error",
+      "import/no-unresolved": "error"
+    }
+  },
+  "javascript.format.enable": false,
+  "editor.tabSize": 2,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "editor.formatOnSave": true,
 
-     // Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
-    "editor.acceptSuggestionOnCommitCharacter": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // Controls if quick suggestions should show up while typing
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
 
-    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
-    "editor.acceptSuggestionOnEnter": "on",
+  // Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
+  "editor.acceptSuggestionOnCommitCharacter": true,
 
-    // Controls the delay in ms after which quick suggestions will show up.
-    "editor.quickSuggestionsDelay": 10,
+  // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
+  "editor.acceptSuggestionOnEnter": "on",
 
-    // Controls if suggestions should automatically show up when typing trigger characters
-    "editor.suggestOnTriggerCharacters": true,
+  // Controls the delay in ms after which quick suggestions will show up.
+  "editor.quickSuggestionsDelay": 10,
 
-    // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
-    "editor.tabCompletion": "off",
+  // Controls if suggestions should automatically show up when typing trigger characters
+  "editor.suggestOnTriggerCharacters": true,
 
-    // Controls whether sorting favours words that appear close to the cursor
-    "editor.suggest.localityBonus": true,
+  // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
+  "editor.tabCompletion": "off",
 
-    // Controls how suggestions are pre-selected when showing the suggest list
-    "editor.suggestSelection": "first",
+  // Controls whether sorting favours words that appear close to the cursor
+  "editor.suggest.localityBonus": true,
 
-    // Enable word based suggestions
-    "editor.wordBasedSuggestions": "matchingDocuments",
+  // Controls how suggestions are pre-selected when showing the suggest list
+  "editor.suggestSelection": "first",
 
-    // Enable parameter hints
-    "editor.parameterHints.enabled": true,
+  // Enable word based suggestions
+  "editor.wordBasedSuggestions": "matchingDocuments",
+
+  // Enable parameter hints
+  "editor.parameterHints.enabled": true
 }
-
-
-    
-
