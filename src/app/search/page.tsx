@@ -26,9 +26,6 @@ export default async function SearchResults({ searchParams }: ISearchProps) {
             <h1 className='mb-4 text-2xl font-bold'>
               Search results for movie Title: <span className='text-red-500'>{title}</span>
             </h1>
-            <h1 className='mb-4 text-2xl font-bold'>
-              Search results for movie Genre: <span className='text-red-500'>{genre}</span>
-            </h1>
             <p className='text-xl'>No movies found</p>
           </main>
         </div>
@@ -43,9 +40,6 @@ export default async function SearchResults({ searchParams }: ISearchProps) {
         <main className='relative mb-48 mt-20 h-screen pl-4 lg:pl-16 '>
           <h1 className='mb-4 text-2xl font-bold'>
             Search results for movie title: <span className='text-red-500'>{title}</span>
-          </h1>
-          <h1 className='mb-4 text-2xl font-bold'>
-            Search results for movie Genre: <span className='text-red-500'>{genre}</span>
           </h1>
           <div className='grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-8 lg:gap-8'>
             {movies.map((movie, index) => (
