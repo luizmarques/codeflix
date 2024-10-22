@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -12,9 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
-      <body
-        className="scrollbar-hide bg-[#141414] text-white">{children}
+      <body className="scrollbar-hide bg-[#141414] text-white">
+        <Suspense>
+          {children}
+        </Suspense>
       </body>
     </html>
   );
