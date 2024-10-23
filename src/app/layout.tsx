@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import './globals.css';
-=======
-import type { Metadata } from "next";
-import "./globals.css";
-import { Suspense } from "react";
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
 
 export const metadata = {
   title: 'Code-flix',
@@ -17,18 +11,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
     <html lang='en'>
       <body className='bg-[#141414] text-white scrollbar-hide'>{children}</body>
-=======
-    
-    <html lang="en">
-      <body className="scrollbar-hide bg-[#141414] text-white">
-        <Suspense>
-          {children}
-        </Suspense>
-      </body>
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
     </html>
   );
 }

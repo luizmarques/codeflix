@@ -1,35 +1,20 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Movie } from '@/app/types/movie';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import { MediaPlayer, MediaProvider } from '@vidstack/react';
 import '@vidstack/react/player/styles/base.css';
-=======
-import { Movie } from "../types/movie";
-import '@vidstack/react/player/styles/base.css';
-import { MediaPlayer, MediaProvider } from '@vidstack/react';
-import Link from "next/link";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
 
 type Props = {
   movie: Movie;
 };
 
-<<<<<<< HEAD
 export default async function Player({ movie }: Props) {
   return (
     <div className='flex h-screen justify-center align-middle'>
-=======
-export function Player( { movie }: Props ) {
-  return (
-    <div className="flex h-screen justify-center align-middle">
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
       <MediaPlayer
         controls={true}
         title={movie.title}
         src={movie.videoFileURL}
-<<<<<<< HEAD
         className='ring-media-focus  aspect-video w-full rounded-md bg-black '
       >
         <Link href='/'>
@@ -37,11 +22,6 @@ export function Player( { movie }: Props ) {
         </Link>
 
         {/* mobile title  */}
-=======
-         className="ring-media-focus aspect-video w-full rounded-md bg-black"
-      >
-          {/* mobile title  */}
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
         <div className='media-playing:opacity-0 visible absolute left-2 top-8 z-50 transition-opacity duration-500 md:invisible'>
           <div className='flex flex-row items-center gap-4'>
             <Link href='/'>
@@ -52,12 +32,8 @@ export function Player( { movie }: Props ) {
             </h1>
           </div>
         </div>
-<<<<<<< HEAD
 
         <MediaProvider className='relative mx-auto flex aspect-video max-w-fit justify-center rounded-md align-middle'>
-=======
-         <MediaProvider className='relative mx-auto flex aspect-video max-w-fit justify-center rounded-md align-middle'>
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
           <div className='media-playing:opacity-0 invisible absolute left-8 top-96 z-50 transition-opacity duration-500 md:visible'>
             <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>
               {movie.title}
@@ -69,9 +45,5 @@ export function Player( { movie }: Props ) {
         </MediaProvider>
       </MediaPlayer>
     </div>
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> 2e8427da4f61760ec89951d4975e609419fa157a
 }
