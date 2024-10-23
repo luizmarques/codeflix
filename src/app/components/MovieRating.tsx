@@ -13,7 +13,7 @@ export const textColor = (rating: string) => {
   }
 };
 
-export const MovieRating = ( { rating }: { rating: string } ) => {
+export const MovieRating = ({ rating }: { rating: string }) => {
   return (
     <span
       className={`text-xsm border-1 border border-gray-700 px-2 uppercase ${textColor(
@@ -22,5 +22,5 @@ export const MovieRating = ( { rating }: { rating: string } ) => {
     >
       {rating}
     </span>
-  )
-}
+  );
+};

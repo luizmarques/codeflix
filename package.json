@@ -2,6 +2,9 @@
   "name": "codeflix",
   "version": "0.1.0",
   "private": true,
+  "description": "",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +14,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
+    "@vidstack/react": "^1.12.11",
     "dotenv": "^16.4.5",
+    "media-icons": "^1.1.5",
     "next": "14.2.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -44,6 +49,8 @@
     "tailwindcss": "^3.4.14",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.10.0"
+    "typescript-eslint": "^8.10.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
   }
 }
